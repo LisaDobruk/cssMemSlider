@@ -1,12 +1,12 @@
 body {
-    background-color: #3a3f44;
+    background-color: #082441;
     font-size: 1rem;
 }
 
 .slider{
     position:relative;
-    width: 780px;
-    margin: 40px auto;
+    width: 48.75rem;
+    margin: 3rem auto;
 }
 
 .slider input[name='button']{
@@ -14,8 +14,8 @@ body {
 }
 
 .elements-area{
-    margin-top: 20px;
-    width: 780px;
+    margin-top: 2rem;
+    width: 48.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center
@@ -27,10 +27,10 @@ body {
 
 .input-wrapper label{
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 0.7rem;
+    height: 0.7rem;
     cursor: pointer;
-    margin: 0 4px;
+    margin: 0 0.25rem;
     border-radius: 50%;
     border: 5px solid #5892c5;
     background-color: #5892c5;
@@ -40,7 +40,7 @@ body {
 #bt2:checked~.elements-area #lb2,
 #bt3:checked~.elements-area #lb3,
 #bt4:checked~.elements-area #lb4{
-    background-color: #3a3f44;
+    background-color: #082441;
 }
 
 .input-wrapper label:hover {
@@ -49,8 +49,8 @@ body {
 }
 
 .input-wrapper label:active {
-    background-color: #eeee6f;
-    border: 5px solid #eeee6f;
+    background-color: #eb0ee0;
+    border: 5px solid #eb0ee0;
 }
 
 .sliderImages{
@@ -59,13 +59,14 @@ body {
 
 .images{
     display: flex;
-    width: 300%;
+    width: 100%;
     transition: all 1s;
 }
 
 .images img{
-        width: 780px;
-        border-radius: 20px;
+        width: 48.75rem;
+        
+        border-radius: 1rem;
 }
 
 #bt1:checked~.sliderImages .images{
@@ -73,15 +74,15 @@ body {
 }
 
 #bt2:checked~.sliderImages .images{
-    transform: translate(-780px);
+    transform: translate(-100%);
 }
 
 #bt3:checked~.sliderImages .images{
-    transform: translate(-1560px);
+    transform: translate(-200%);
 }
 
 #bt4:checked~.sliderImages .images{
-    transform: translate(-2340px);
+    transform: translate(-300%);
 }
 
 .text-wrapper{
@@ -95,6 +96,7 @@ body {
     width: 30vw;
     margin: 0;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 #bt1:checked~.elements-area .text-wrapper .text:nth-child(1),
 #bt2:checked~.elements-area .text-wrapper .text:nth-child(2),
@@ -113,5 +115,32 @@ body {
         opacity: 1;
         z-index: 2;
         transform: translateX(0);
+    }
+}
+
+@media (max-width: 1060px){
+    .elements-area{
+        width: 100%;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .text-wrapper{
+        margin-top: 2rem ;
+        width: 100%;
+    }
+    .text{
+        width: 100%;
+    }
+
+    .images img{
+        
+        max-width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 800px){
+    .slider{
+        width: 100%;
+        height: auto;
     }
 }
