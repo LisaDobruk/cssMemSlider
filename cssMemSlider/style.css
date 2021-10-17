@@ -1,0 +1,145 @@
+body {
+    background-color: #082441;
+    font-size: 1rem;
+}
+
+.slider{
+    position:relative;
+    width: 48.75rem;
+    margin: 3rem auto;
+}
+
+.slider input[name='button']{
+    display: none;
+}
+
+.elements-area{
+    margin-top: 2rem;
+    width: 48.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.input-wrapper{
+    display: flex;
+}
+
+.input-wrapper label{
+    display: inline-block;
+    width: 0.7rem;
+    height: 0.7rem;
+    cursor: pointer;
+    margin: 0 0.25rem;
+    border-radius: 50%;
+    border: 0.3rem solid #5892c5;
+    background-color: #5892c5;
+}
+
+#bt1:checked~.elements-area #lb1,
+#bt2:checked~.elements-area #lb2,
+#bt3:checked~.elements-area #lb3,
+#bt4:checked~.elements-area #lb4{
+    background-color: #082441;
+}
+
+.input-wrapper label:hover {
+    background-color: #f1f1e7;
+    border: 0.3rem solid #f1f1e7;
+}
+
+.input-wrapper label:active {
+    background-color: #eb0ee0;
+    border: 0.3rem solid #eb0ee0;
+}
+
+.sliderImages{
+    overflow: hidden;
+}
+
+.images{
+    display: flex;
+    width: 100%;
+    transition: all 1s;
+}
+
+.images img{
+        width: 48.75rem;
+        
+        border-radius: 1rem;
+}
+
+#bt1:checked~.sliderImages .images{
+    transform: translate(0);
+}
+
+#bt2:checked~.sliderImages .images{
+    transform: translate(-100%);
+}
+
+#bt3:checked~.sliderImages .images{
+    transform: translate(-200%);
+}
+
+#bt4:checked~.sliderImages .images{
+    transform: translate(-300%);
+}
+
+.text-wrapper{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #5892c5;
+}
+.text{
+    display: none;
+    width: 30vw;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#bt1:checked~.elements-area .text-wrapper .text:nth-child(1),
+#bt2:checked~.elements-area .text-wrapper .text:nth-child(2),
+#bt3:checked~.elements-area .text-wrapper .text:nth-child(3),
+#bt4:checked~.elements-area .text-wrapper .text:nth-child(4){
+    display: block;
+    animation: 0.5s ease-in-out text-changes;
+}
+@keyframes text-changes{
+    from{
+        opacity: 0;
+        z-index: -1;
+        transform: translateX(-2vw);
+    }
+    to{
+        opacity: 1;
+        z-index: 2;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1060px){
+    .elements-area{
+        width: 100%;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .text-wrapper{
+        margin-top: 2rem ;
+        width: 100%;
+    }
+    .text{
+        width: 100%;
+    }
+}
+@media (max-width: 800px){
+    .slider{
+        width: 100%;
+        height: auto;
+    }
+    .images img{
+        
+        max-width: 100%;
+        height: auto;
+    }
+}
