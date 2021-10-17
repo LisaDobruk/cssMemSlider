@@ -32,7 +32,7 @@ body {
     cursor: pointer;
     margin: 0 0.25rem;
     border-radius: 50%;
-    border: 5px solid #5892c5;
+    border: 0.3rem solid #5892c5;
     background-color: #5892c5;
 }
 
@@ -45,12 +45,12 @@ body {
 
 .input-wrapper label:hover {
     background-color: #f1f1e7;
-    border: 5px solid #f1f1e7;
+    border: 0.3rem solid #f1f1e7;
 }
 
 .input-wrapper label:active {
     background-color: #eb0ee0;
-    border: 5px solid #eb0ee0;
+    border: 0.3rem solid #eb0ee0;
 }
 
 .sliderImages{
@@ -131,16 +131,15 @@ body {
     .text{
         width: 100%;
     }
-
-    .images img{
-        
-        max-width: 100%;
-        height: auto;
-    }
 }
 @media (max-width: 800px){
     .slider{
         width: 100%;
+        height: auto;
+    }
+    .images img{
+        
+        max-width: 100%;
         height: auto;
     }
 }
