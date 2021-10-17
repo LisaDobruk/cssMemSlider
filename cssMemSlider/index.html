@@ -8,30 +8,41 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class='sliderButton'>
+    <div class='slider'>
 
-       <input type="radio" name='button' id='btn1'>
-       <input type="radio" name='button' id='btn2'>
-       <input type="radio" name='button' id='btn3'>
-       <input type="radio" name='button' id='btn4'>
+       <input type="radio" name='button' id='bt1' checked>
+       <input type="radio" name='button' id='bt2'>
+       <input type="radio" name='button' id='bt3'>
+       <input type="radio" name='button' id='bt4'>
                
-       <div class='description'>
+       <div class='sliderImages'>
+        <div class='images'>
+           <img src="./cookies.png" alt="the cat and cookies">
+           <img src="./surprise.jpg" alt="the cat and surprise">
+           <img src="./myselfJoke.jpg" alt="the cat made up a joke">
+           <img src="./dogAndCat.png" alt="the cat looks at the owner with the dog">
+        </div>
+      </div>
 
-           <label for="btn1"><h1>Do you like cookies?</h1></label>
-           <label for="btn2"><h1>Do you like cats?</h1></label>
-           <label for="btn3"><h1>The kitties are amazing.</h1></label>
-           <label for="btn4"><h1>Cats are great in all situations.</h1></label>
-           
+      <div class='elements-area'>
+
+        <div class="text-wrapper">
+            <p class="text">Do you like cookies?</p>
+            <p class="text">Do you like cats?</p>
+            <p class="text">Cats are amazing...</p>
+            <p class="text">Cats are great in any situation)</p>
+          </div>
+
+        <div class='input-wrapper'>
+          <label for="bt1" id='lb1'></label>
+          <label for="bt2" id='lb2'></label>
+          <label for="bt3" id='lb3'></label>
+          <label for="bt4" id='lb4'></label>
+        </div>
+
        </div>
     </div>
 
-    <div class='sliderImages'>
-        <img src="./cookies.png" alt="the cat and cookies">
-        <img src="./surprise.jpg" alt="the cat and surprise">
-        <img src="./myselfJoke.jpg" alt="the cat made up a joke">
-        <img src="./dogAndCat.png" alt="the cat looks at the owner with the dog">
-
-    </div>
 </body>
 
 </html>

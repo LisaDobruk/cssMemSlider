@@ -1,3 +1,117 @@
 body {
-    background-color: #555d64;
+    background-color: #3a3f44;
+    font-size: 1rem;
+}
+
+.slider{
+    position:relative;
+    width: 780px;
+    margin: 40px auto;
+}
+
+.slider input[name='button']{
+    display: none;
+}
+
+.elements-area{
+    margin-top: 20px;
+    width: 780px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.input-wrapper{
+    display: flex;
+}
+
+.input-wrapper label{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin: 0 4px;
+    border-radius: 50%;
+    border: 5px solid #5892c5;
+    background-color: #5892c5;
+}
+
+#bt1:checked~.elements-area #lb1,
+#bt2:checked~.elements-area #lb2,
+#bt3:checked~.elements-area #lb3,
+#bt4:checked~.elements-area #lb4{
+    background-color: #3a3f44;
+}
+
+.input-wrapper label:hover {
+    background-color: #f1f1e7;
+    border: 5px solid #f1f1e7;
+}
+
+.input-wrapper label:active {
+    background-color: #eeee6f;
+    border: 5px solid #eeee6f;
+}
+
+.sliderImages{
+    overflow: hidden;
+}
+
+.images{
+    display: flex;
+    width: 300%;
+    transition: all 1s;
+}
+
+.images img{
+        width: 780px;
+        border-radius: 20px;
+}
+
+#bt1:checked~.sliderImages .images{
+    transform: translate(0);
+}
+
+#bt2:checked~.sliderImages .images{
+    transform: translate(-780px);
+}
+
+#bt3:checked~.sliderImages .images{
+    transform: translate(-1560px);
+}
+
+#bt4:checked~.sliderImages .images{
+    transform: translate(-2340px);
+}
+
+.text-wrapper{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #5892c5;
+}
+.text{
+    display: none;
+    width: 30vw;
+    margin: 0;
+    font-size: 1.5rem;
+}
+#bt1:checked~.elements-area .text-wrapper .text:nth-child(1),
+#bt2:checked~.elements-area .text-wrapper .text:nth-child(2),
+#bt3:checked~.elements-area .text-wrapper .text:nth-child(3),
+#bt4:checked~.elements-area .text-wrapper .text:nth-child(4){
+    display: block;
+    animation: 0.5s ease-in-out text-changes;
+}
+@keyframes text-changes{
+    from{
+        opacity: 0;
+        z-index: -1;
+        transform: translateX(-2vw);
+    }
+    to{
+        opacity: 1;
+        z-index: 2;
+        transform: translateX(0);
+    }
 }
